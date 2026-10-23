@@ -10,34 +10,20 @@ Projet de cours : récupération d'informations sur des produits Amazon (nom, pr
 - Propose un menu principal en console.
 - Sauvegarde et exporte les produits dans des fichiers CSV.
 
-## Prérequis
 
-- Python 3
-- Google Chrome installé (Selenium télécharge automatiquement le pilote adapté)
 
-## Installation
 
-```
-py -m pip install -r requirements.txt
-```
 
 ## Lancement
 
-Depuis la racine du projet, dans le terminal :
 
-```
-py main.py
-```
+
 
 Le programme scrape la page, affiche les produits, puis affiche le menu principal.
 
-## Configuration
-
-Les adresses des pages à scraper sont dans `config.py` (`URL` et `URL_2`). Pour scraper la deuxième page, décommenter la ligne `lancer(URL_2)` dans `main.py`.
-
 ## Architecture
 
-```
+
 amazon_scraper/
 ├── main.py                  Point d'entrée du programme
 ├── config.py                Adresses (URL) des pages à scraper
@@ -57,18 +43,7 @@ amazon_scraper/
     └── views/
         ├── console_view.py          Affichage des produits et menu principal
         └── export_view.py           Export des résultats en CSV
-```
 
-## État d'avancement
 
-- Le menu renvoie le choix de l'utilisateur ; les options 2, 3 et 4 ne sont pas encore reliées aux fonctions de `depot.py` et `export_view.py`.
-- `produit.py` est à compléter.
-- Les sélecteurs CSS dépendent du HTML d'Amazon, qui change régulièrement : ils peuvent devoir être mis à jour.
 
-## Avertissement
 
-Projet réalisé dans un but pédagogique. Le scraping automatisé est contraire aux conditions d'utilisation d'Amazon : à utiliser avec modération et sans usage commercial.
-
-## Auteurs
-
-À compléter : nom(s), cours, date.
